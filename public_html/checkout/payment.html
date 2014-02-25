@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Bathmatewarehouse</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width">
+
+        <link rel="stylesheet" href="css/normalize.min.css">  
+        <link rel="stylesheet" href="css/grey.css"> 
+        <link rel="stylesheet" href="css/chosen.css">
+        <link rel="stylesheet" href="css/main.css">
+
+        <!--[if lt IE 10]>
+            <style>
+                section.shipping .wrap hr{
+                    margin-left: -15px;
+                }
+            </style>
+        <![endif]-->
+
+        <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+        <link type="text/css" rel="stylesheet" href="http://fast.fonts.net/cssapi/0355ef5c-16d3-41ff-8723-a6509d50b88b.css"/>
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+        <![endif]-->
+<header class="clearfix">
+    <div class="wrap clearfix">
+        <div class="logo clearfix">
+            <a href="#">
+                <img src="images/logo.png" alt="">
+            </a>
+        </div> <!-- logo -->
+        
+        <div class="call clearfix">
+            <img src="images/call.png" alt="">
+            <em>+1 (800) 983-3820</em>
+        </div> <!-- call -->
+        
+    </div> <!-- wrap -->
+</header>
+
+<section class="shipping clearfix">
+    <div class="wrap clearfix">
+        <ul class="steps clearfix">
+            <li>checkout <br/><span>0</span></li>
+            <li>shipping <br/><span>0</span></li>
+            <li class="current">payment <br/><span>0</span></li>
+            <li>confirmation <br/><span>0</span></li>            
+        </ul> <!-- steps -->
+        <hr/>
+
+        <div class="shipping_address payment clearfix">
+            <h4>Payment Information</h4>
+            <form class="clearfix" action="#" method="post"> 
+                <div class="clearfix">
+                    <label>Choose Your Payment Method</label>
+                    <ul class="payment_type clearfix">
+                        <li id="card_li">
+                            <input type="radio" name="iCheck" id="card" checked>
+                            <label for="card"><img src="images/card_icon.png" alt="">Credit/Debit Card</label>
+                            <img src="images/cards.png" alt="">                        
+                        </li>
+                        <li id="paypal_li">
+                            <input type="radio" id="paypal" name="iCheck">
+                            <label for="paypal"><img src="images/paypal_icon.png" alt="">PayPal</label>
+                            <img src="images/paypal.png" alt="">
+                        </li>
+                    </ul>
+
+                    <p>You have selected to pay for your order using Paypal. Please click the <strong>Place Order</strong> button below and you will be redirected to Paypal to process your payment securely.</p>
+
+                    <ul class="card_info clearfix">
+                        <li>
+                            <label>Credit Card Number</label>
+                            <input type="text" name="userid" data-validetta="required,creditCard" />
+                        </li>
+                        <li id="card_type">
+                            <label>Card Type</label>
+                            <select name="" id="">
+                                <option value="VISA">VISA</option>
+                                <option value="Master Card">Master Card</option>
+                            </select>
+                        </li>
+                        <li id="expiry_date">
+                            <label>Expires</label>
+                            <div class="clearfix">
+                                <select name="" id="">
+                                    <option value="01">01</option>
+                                    <option value="02">02</option>
+                                    <option value="03">03</option>
+                                    <option value="04">04</option>
+                                    <option value="05">05</option>
+                                    <option value="06">06</option>
+                                    <option value="07">07</option>
+                                    <option value="08">08</option>
+                                    <option value="09">09</option>
+                                    <option value="10">10</option>
+                                    <option value="11">11</option>
+                                    <option value="12">12</option>
+                                </select>                            
+                            </div>
+                            <div class="clearfix">
+                                <select name="" id="">
+                                    <option value="19">19</option>
+                                    <option value="18">18</option>
+                                    <option value="17">17</option>
+                                    <option value="16">16</option>
+                                    <option value="15">15</option>
+                                    <option value="14">14</option>
+                                    <option value="13">13</option>
+                                    <option value="12">12</option>
+                                    <option value="11">11</option>
+                                    <option value="10">10</option>
+                                    <option value="09">09</option>
+                                    <option value="08">08</option>
+                                </select>                             
+                            </div>                       
+                        </li>                    
+                        <li id="cvv">
+                            <label>CVV</label>
+                            <input type="text" data-validetta="required,minLength[3],maxLength[3],number" />
+                            <em>Last 3 digits on the back of the card</em>
+                        </li>
+                    </ul>
+                    <p>Please note, your card statement will show only <strong>UM Products</strong></p>
+                </div>
+                <button type="submit" class="checkout">
+                    <img src="images/btn_icon_bg.png" alt="">
+                    <span id="btn_box_icon"></span>
+                    <span id="btn_arrow"></span> 
+                    <h4>Place Order</h4>                              
+                </button>
+            </form>
+                      
+        </div> <!-- shipping_address payment -->    
+
+        <aside class="clearfix">
+            <div class="order_summary clearfix">
+                <h4>Order Summary</h4>
+                <div class="clearfix">
+                    <ul class="ordered_items clearfix">
+                        <li>
+                            <a href="#"><img src="images/goliath_thumb.jpg" alt="">
+                            Bathmate Goliath
+                            <em>2 x &#163;59.90</em></a>
+                        </li>
+                        <li>
+                            <a href="#"><img src="images/cleaning_kit_thumb.jpg" alt="">
+                            Bathmate Goliath
+                            <em>1 x &#163;29.90</em></a>                      
+                        </li>
+                        <li>
+                            <a href="#"><img src="images/gun_oil_thumb.jpg" alt="">
+                            Gun Oil H2O Lubricant
+                            <em>2 x &#163;29.90</em></a>
+                        </li>
+                    </ul>
+                    <ul class="total clearfix">
+                        <li>Cart Total</li>
+                        <li>Shipping</li>
+                        <li>Total</li>
+                    </ul>
+                    <ul class="total clearfix">
+                        <li>&#163;124.90</li>
+                        <li>&#163;5.90</li>
+                        <li>&#163;130.80</li>
+                    </ul>
+                </div>
+                <ul class="support clearfix">
+                    <li><a id="support" href="#">Customer Support <span></span></a></li>
+                    <li><a id="guarantee" href="#">Money Back Guarantee <span></span></a></li>
+                </ul>
+            </div> <!-- order_summary -->
+        </aside>
+        
+    </div> <!-- wrap -->
+</section>
+
+      
+
+<footer class="clearfix">
+    <div class="bg_image">
+        
+    </div>
+    <div class="wrap">
+        <ul class="security clearfix">
+            <li><img src="images/ssl_cards.png" alt=""></li>
+            <li><img src="images/shipping_box.png" alt=""></li>
+            <li><img src="images/mcafee_truste.png" alt=""></li>
+        </ul>
+    </div> <!-- wrap -->
+    
+    <div class="contact clearfix">
+    <div class="wrap">    
+        <ul class="clearfix">
+            <li><img src="images/call.png" alt="">+1 (800) 983-3820</li>
+            <li><img src="images/address.png" alt="">3023 Hamaker Court Fairfax, VA(Virginia) 22031</li>
+        </ul>
+    </div> <!-- wrap --> 
+    </div> <!-- contact -->       
+
+</footer>
+
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
+
+        <script src="js/plugins.js"></script>
+        <script src="js/chosen.jquery.min.js"></script> 
+        <script src="js/main.js"></script>	
+        <script src="js/validetta-min.js"></script>
+        
+        <script>
+            $(document).ready(function(){
+
+                $("#card_li").click(function(){
+                    $('#card').iCheck('check');
+                    $('#paypal').iCheck('uncheck');
+                    $(this).css('background-color', '#171717');
+                    $(this).css('transition', 'background-color 0.25s ease-out');
+                    $("#paypal_li").css('background-color', '#252525');                    
+                });
+
+                $("#paypal_li").click(function(){
+                    $('#paypal').iCheck('check');
+                    $('#card').iCheck('uncheck');
+                    $(this).css('background-color', '#171717');
+                    $(this).css('transition', 'background-color 0.25s ease-out');
+                    $("#card_li").css('background-color', '#252525');
+                }); 
+
+                $("#card_li label, #card_li div.iradio_flat-grey ins").click(function(){
+                    $('#card_li').css('background-color', '#171717');
+                    $('#card_li').css('transition', 'background-color 0.25s ease-out');
+                    $("#paypal_li").css('background-color', '#252525');                    
+                });
+
+                $("#paypal_li label, #paypal_li div.iradio_flat-grey ins").click(function(){
+                    $('#paypal_li').css('background-color', '#171717');
+                    $('#paypal_li').css('transition', 'background-color 0.25s ease-out');
+                    $("#card_li").css('background-color', '#252525');
+                });
+
+                $('div.payment p').hide();
+                $('div.payment p:last-child').show();
+
+                $('input#card').on('ifChecked', function(event){
+                    $('div.payment p').hide();
+                    $('ul.card_info').show();
+                    $('div.payment p:last-child').show();
+                });
+
+                $('input#paypal').on('ifChecked', function(event){
+                    $('ul.card_info').hide();
+                    $('div.payment p').show();
+                    $('div.payment p:last-child').hide();
+                });
+
+                $('select').chosen({disable_search_threshold: 10});
+
+                $('button.checkout').click(function(){
+                    if (($('#card_li div.iradio_flat-grey').hasClass('checked'))&&(!$('#paypal_li div.iradio_flat-grey').hasClass('checked'))) {
+
+                        $('form').addClass('payment_form');
+                        $(".payment_form").validetta({
+                            realTime : false
+                        });
+                    }
+                    if($('#paypal_li div.iradio_flat-grey').hasClass('checked')){                        
+                        $('ul.card_info').remove();
+                    }
+                });
+
+            });
+        </script>
+
+    </body>
+</html>

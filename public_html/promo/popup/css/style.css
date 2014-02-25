@@ -1,0 +1,126 @@
+body{margin:0; padding:0;font-family:'helvetica_neueregular'; font-size:10px; color:#c1c1c1; background:#181818;}
+
+/*** IE FONT ***/
+@font-face {font-family:'helvetica_neueregular';
+    src: url('../fonts/helvetica-neue-regular-webfont.eot');
+    src: url('../fonts/helvetica-neue-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/helvetica-neue-regular-webfont.woff') format('woff'),
+         url('../fonts/helvetica-neue-regular-webfont.ttf') format('truetype'),
+         url('../fonts/helvetica-neue-regular-webfont.svg#helvetica_neueregular') format('svg');
+    font-weight: normal;
+    font-style: normal;}
+	
+@font-face {font-family:'geogrotesque_bdbold';
+    src: url('../fonts/geogtq-bd-webfont.eot');
+    src: url('../fonts/geogtq-bd-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/geogtq-bd-webfont.woff') format('woff'),
+         url('../fonts/geogtq-bd-webfont.ttf') format('truetype'),
+         url('../fonts/geogtq-bd-webfont.svg#geogrotesque_bdbold') format('svg');
+    font-weight:normal;
+    font-style:normal;}
+
+@font-face {font-family:'geogrotesque_smbdsemibold';
+    src: url('../fonts/geogtq-sb-webfont.eot');
+    src: url('../fonts/geogtq-sb-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/geogtq-sb-webfont.woff') format('woff'),
+         url('../fonts/geogtq-sb-webfont.ttf') format('truetype'),
+         url('../fonts/geogtq-sb-webfont.svg#geogrotesque_smbdsemibold') format('svg');
+    font-weight:normal;
+    font-style:normal;}
+	
+/*** COMMON CSS ***/
+#main{margin:0 auto; width:100%; float:left;}
+img{border:0;}
+h1, h2, h3, h4, h5{margin:0; padding:0; line-height:normal; width:100%; font-weight:normal;font-family:'geogrotesque_bdbold';}
+ul{margin:0; padding:0; width:100%; float:left;}
+ul li{list-style:none; float:left;}
+
+.details_holder{ width:750px; margin:0 auto; padding:20px 25px; clear:both;}
+.common_container{width:748px; height:333px; padding:95px 0 0 0; float:left; background:#252525; border:1px solid #353535; border-bottom:2px solid #000;}
+.terms_of_use{width:100%; float:left; text-align:center;}
+/*** HEADER ****/
+.header{ width:100%; height:50px; padding:19px 0 0 0; float:left; background:url(../images/header.png) repeat-x;}
+.header_logo{width:750px; margin:0 auto;}
+
+/*** FOOTER ****/
+.footer{ width:100%; height:60px; float:left; background:url(../images/footer.png) repeat-x; bottom:0; left:0; position:fixed;}
+.footer_content{width:750px; margin:0 auto; font-size:13px; color:#8593a1;}
+.footer_content .phone{width:125px; float:left; background:url(../images/phone.png) no-repeat 0 20px;  padding:20px 0 5px 30px;}
+.footer_content .address{width:315px; float:left; background:url(../images/address.png) no-repeat 0 20px;  padding:20px 0 5px 30px;}
+.footer_content .ico_holder{width:250px; float:left; text-align:right; padding:12px 0 0 0;}
+.footer_content .ico_holder img{margin:0 0 0 8px;}
+
+/*** PAGE 1 ***/
+.page1_container{ width:396px; margin:0 auto; height:300px; clear:both;}
+.page1_container .text_holder{width:330px; height:165px; padding:15px 62px 0 5px; float:left; background:url(../images/page1.png) no-repeat 0 0; text-align:center; text-transform:uppercase;}
+.page1_container .text_holder h1{ font-size:39px; color:#e22525; line-height:15px;}
+.page1_container .text_holder h2{ font-size:20px; color:#999; line-height:50px;}
+.page1_container .text_holder h3{ font-size:100px; color:#fff; line-height:55px;}
+.page1_container .give_coupon{width:100%; float:left; padding:10px 0 0 0;}
+.page1_container .give_coupon .textbox{ width:201px; float:left;}
+.page1_container .give_coupon .textbox input{border:0; font-size:12px; color:#697889; font-family:Arial, Helvetica, sans-serif; height:39px; padding:0 10px; width:181px; -moz-border-radius:3px 0 0 3px;-webkit-border-radius:3px 0 0 3px;border-radius:3px 0 0 3px;}
+.page1_container .give_coupon .btn_holder{ width:195px; float:left;}
+.page1_container .give_coupon .btn_holder input{border:0; cursor:pointer; width:195px; height:39px;padding:0 10px 0 0; background:url(../images/btn1.png) no-repeat 0 0; text-align:center; color:#fff;font-family:'geogrotesque_smbdsemibold'; text-transform:uppercase; font-size:16px;}
+
+/*** PAGE 2 ***/
+.page2_container{ width:396px; margin:0 auto; height:300px; clear:both;}
+.page2_container .text_holder{width:320px; height:170px; padding:12px 66px 0 10px; float:left; background:url(../images/page2.png) no-repeat 0 0; text-align:center; text-transform:uppercase;}
+.page2_container .text_holder h1{ font-size:37px; color:#e22525; line-height:25px;}
+.page2_container .text_holder h2{ font-size:20px; color:#999; line-height:40px;}
+.page2_container .text_holder h3{ font-size:100px; color:#fff; line-height:62px;}
+.page2_container .give_coupon{width:100%; float:left; padding:10px 0 0 0; text-align:center;}
+.page2_container .give_coupon input{border:0; cursor:pointer; width:232px; height:47px; padding:0 10px 0 0; background:url(../images/btn4.png) no-repeat 0 0; text-align:center; color:#fff;font-family:'geogrotesque_smbdsemibold'; text-transform:uppercase; font-size:18px;}
+
+/*** PAGE 3 ***/
+.page3_container{ width:354px; margin:0 auto; height:300px; clear:both;}
+.page3_container .text_holder{width:354px; height:170px; padding:12px 0 0 0; float:left; background:url(../images/page3.png) no-repeat 0 0; text-align:center; text-transform:uppercase;}
+.page3_container .text_holder h1{ font-size:37px; color:#e22525; line-height:25px;}
+.page3_container .text_holder h2{ font-size:20px; color:#999; line-height:45px;}
+.page3_container .text_holder h3{ font-size:100px; color:#fff; line-height:55px;}
+.page3_container .give_coupon{width:100%; float:left; padding:10px 0 0 0;}
+.page3_container .give_coupon .textbox{ width:159px; float:left;}
+.page3_container .give_coupon .textbox input{border:0; font-size:12px; color:#697889; font-family:Arial, Helvetica, sans-serif; height:39px; padding:0 10px; width:139px; -moz-border-radius:3px 0 0 3px;-webkit-border-radius:3px 0 0 3px;border-radius:3px 0 0 3px;}
+.page3_container .give_coupon .btn_holder{ width:195px; float:left;}
+.page3_container .give_coupon .btn_holder input{border:0; cursor:pointer; width:195px; height:39px; padding:0 10px 0 0; background:url(../images/btn1.png) no-repeat 0 0; text-align:center; color:#fff;font-family:'geogrotesque_smbdsemibold'; text-transform:uppercase; font-size:16px;}
+
+/*** PAGE 4 ***/
+.page4_container{ width:354px; margin:0 auto; height:300px; clear:both;}
+.page4_container .text_holder{width:354px; height:150px; padding:9px 0 0 0; float:left; background:url(../images/page4.png) no-repeat 0 0; text-align:center; text-transform:uppercase;}
+.page4_container .text_holder h1{ font-size:37px; color:#e22525; line-height:35px;}
+.page4_container .text_holder h2{ font-size:20px; color:#999; line-height:30px;}
+.page4_container .text_holder h3{ font-size:100px; color:#fff; line-height:70px;}
+.page4_container .give_coupon{width:100%; float:left; padding:10px 0 0 0; text-align:center;}
+.page4_container .give_coupon input{border:0; cursor:pointer; width:232px; height:47px; padding:0 10px 0 0; background:url(../images/btn4.png) no-repeat 0 0; text-align:center; color:#fff;font-family:'geogrotesque_smbdsemibold'; text-transform:uppercase; font-size:18px;}
+
+/*** PAGE 5 ***/
+.page5_container{ width:376px; margin:0 auto; height:300px; clear:both;}
+.page5_container .text_holder{width:376px; height:190px; padding:10px 0 0 0; float:left; background:url(../images/page5.png) no-repeat 0 0; text-align:center; text-transform:uppercase;}
+.page5_container .text_holder h1{ font-size:39px; color:#e22525; line-height:30px;}
+.page5_container .text_holder h2{ font-size:20px; color:#fff; line-height:25px;}
+.page5_container .text_holder h2 span{font-size:24px; color:#f65e1b;}
+.page5_container .text_holder h2 span.grey{color:#999;}
+.page5_container .text_holder h3{ font-size:72px; color:#fff; line-height:55px;}
+.page5_container .text_holder h4{ font-size:20px; color:#999; line-height:22px;}
+.page5_container .give_coupon{width:100%; float:left; padding:10px 0 0 0;}
+.page5_container .give_coupon .textbox{ width:228px; float:left;}
+.page5_container .give_coupon .textbox input{border:0; font-size:12px; color:#697889; font-family:Arial, Helvetica, sans-serif; height:39px; padding:0 10px; width:208px; -moz-border-radius:3px 0 0 3px;-webkit-border-radius:3px 0 0 3px;border-radius:3px 0 0 3px;}
+.page5_container .give_coupon .btn_holder{ width:148px; float:left;}
+.page5_container .give_coupon .btn_holder input{border:0; cursor:pointer; width:148px; height:39px; padding:0 10px 0 0; background:url(../images/btn6.png) no-repeat 0 0; text-align:center; color:#fff;font-family:'geogrotesque_smbdsemibold'; text-transform:uppercase; font-size:16px;}
+
+/*** PAGE 6 ***/
+.page6_container{ width:376px; margin:0 auto; height:300px; clear:both;}
+.page6_container .text_holder{width:376px; height:200px; padding:12px 0 0 0; float:left; background:url(../images/page6.png) no-repeat 0 0; text-align:center; text-transform:uppercase;}
+.page6_container .text_holder h1{ font-size:50px; color:#e22525; line-height:30px;}
+.page6_container .text_holder h2{ font-size:70px; color:#fff; line-height:75px;}
+.page6_container .text_holder h3{ font-size:20px; color:#fff; line-height:25px;}
+.page6_container .text_holder h3 span{font-size:36px; color:#f65e1b;}
+.page6_container .text_holder h4{ font-size:20px; color:#999; line-height:28px;}
+.page6_container .give_coupon{width:100%; float:left; padding:10px 0 0 0;}
+.page6_container .give_coupon .textbox{ width:228px; float:left;}
+.page6_container .give_coupon .textbox input{border:0; font-size:12px; color:#697889; font-family:Arial, Helvetica, sans-serif; height:39px; padding:0 10px; width:208px; -moz-border-radius:3px 0 0 3px;-webkit-border-radius:3px 0 0 3px;border-radius:3px 0 0 3px;}
+.page6_container .give_coupon .btn_holder{ width:148px; float:left;}
+.page6_container .give_coupon .btn_holder input{border:0; cursor:pointer; width:148px; height:39px; padding:0 10px 0 0; background:url(../images/btn6.png) no-repeat 0 0; text-align:center; color:#fff;font-family:'geogrotesque_smbdsemibold'; text-transform:uppercase; font-size:16px;}
+
+/*** PAGE 7 ***/
+.video_container{width:748px; height:413px; padding:15px 0 0 0; float:left; background:#252525; border:1px solid #353535; border-bottom:2px solid #000;}
+.video_holder{width:100%; float:left; text-align:center; padding:0 0 15px 0;}

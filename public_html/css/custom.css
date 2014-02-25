@@ -1,0 +1,16 @@
+.simpleCart_items
+{
+    color: #ffffff;
+}
+
+.simpleCart_items div.headerRow
+{
+    border: 1px solid red;
+    height: 30px;
+}
+
+.simpleCart_items div.headerRow div
+{
+    float: left;
+}
+
