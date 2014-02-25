@@ -36,7 +36,10 @@
 
                 ],
                 // "div" or "table" - builds the cart as a table or collection of divs
-                cartStyle: "table"
+                cartStyle: "table",
+
+                // set the currency, see the currency reference for more info
+                currency: "GBP",
             });
 
         </script>
