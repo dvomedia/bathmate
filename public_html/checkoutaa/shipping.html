@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Bathmatewarehouse</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width">
+
+        <link rel="stylesheet" href="css/normalize.min.css">  
+        <link rel="stylesheet" href="css/grey.css">
+        <link rel="stylesheet" href="css/chosen.css">
+        <link rel="stylesheet" href="css/main.css">
+
+        <!--[if lt IE 12]>
+            <style>
+                section.shipping .wrap hr{
+                    margin-left: -15px;
+                }
+            </style>
+        <![endif]-->
+
+        <style>
+            html[data-useragent*='MSIE 11.0'] section.shipping .wrap hr{
+                margin-left: -15px;
+            }
+        </style>
+
+        <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+        <link type="text/css" rel="stylesheet" href="http://fast.fonts.net/cssapi/0355ef5c-16d3-41ff-8723-a6509d50b88b.css"/>
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+        <![endif]-->
+<header class="clearfix">
+    <div class="wrap clearfix">
+        <div class="logo clearfix">
+            <a href="#">
+                <img src="images/logo.png" alt="">
+            </a>
+        </div> <!-- logo -->
+        
+        <div class="call clearfix">
+            <img src="images/call.png" alt="">
+            <em>+1 (800) 983-3820</em>
+        </div> <!-- call -->
+        
+    </div> <!-- wrap -->
+</header>
+
+<section class="shipping clearfix">
+    <div class="wrap clearfix">
+        <ul class="steps clearfix">
+            <li>checkout <br/><span>0</span></li>
+            <li class="current">shipping <br/><span>0</span></li>
+            <li>payment <br/><span>0</span></li>
+            <li>confirmation <br/><span>0</span></li>            
+        </ul> <!-- steps -->
+        <hr/>
+
+        <div class="shipping_address clearfix">
+            <h4>Enter your shipping address</h4>
+            <form id="shipping_form" class="clearfix" action="#" method="post">
+
+                <div class="clearfix">  
+                    <ul class="clearfix"> 
+                        <li>
+                            <label>First Name</label>
+                            <input type="text" data-validetta="required">
+                        </li>
+                        <li>
+                            <label>Last Name</label>
+                            <input type="text">
+                        </li>
+                        <li>
+                            <label>Email</label>
+                            <input type="email" data-validetta="required,email">
+                        </li>
+                        <li>
+                            <label>Phone Number</label>
+                            <input type="tel" data-validetta="required,number">
+                        </li>                
+                    </ul>
+                    <ul class="clearfix">
+                        <li>
+                            <label>Street Address Line 1</label>
+                            <input type="text" data-validetta="required">
+                        </li>
+                        <li>
+                            <label>Street Address Line 2</label>
+                            <input type="text">
+                        </li>
+                        <li>
+                            <label>City</label>
+                            <input type="text" data-validetta="required">
+                        </li>
+                        <li>
+                            <label>Zip/Postal Code</label>
+                            <input type="text" data-validetta="required">
+                        </li>
+                        <li>
+                            <label>Region</label>
+                            <!-- <span></span> -->
+                            <select name="" id="">
+                                <option value="">Select a region</option>
+                                <option value="australia">Australia</option>
+                                <option value="california">California</option>
+                                <option value="canada">Canada</option>
+                                <option value="district-of-columbia">District of Columbia</option>
+                                <option value="delaware">Delaware</option>
+                                <option value="spain">Spain</option>
+                                <option value="florida">Florida</option>
+                                <option value="georgia">Georgia</option>
+                            </select>
+                        </li>
+                        <li>
+                            <label>Country</label>
+                            <!-- <span></span> -->
+                            <select name="" id="">
+                                <option value="">Select a country</option>
+                                <option value="australia">Australia</option>
+                                <option value="california">California</option>
+                                <option value="canada">Canada</option>
+                                <option value="district-of-columbia">District of Columbia</option>
+                                <option value="delaware">Delaware</option>
+                                <option value="spain">Spain</option>
+                                <option value="florida">Florida</option>
+                                <option value="georgia">Georgia</option>
+                                <option value="gibraltar">Gibraltar</option>
+                                <option value="croatia">Croatia</option>
+                                <option value="ireland">Ireland</option>
+                                <option value="illinois">Illinois</option>
+                                <option value="isle-of-man">Isle of Man</option>
+                                <option value="indiana">Indiana</option>
+                                <option value="india">India</option>
+                                <option value="jersey">Jersey</option>
+                                <option value="luxembourg">Luxembourg</option>
+                                <option value="massachusetts">Massachusetts</option>
+                                <option value="michigan">Michigan</option>
+                                <option value="missouri">Missouri</option>
+                                <option value="north-carolina">North Carolina</option>
+                                <option value="netherlands">Netherlands</option>
+                                <option value="norway">Norway</option>
+                                <option value="new-york">New York</option>
+                                <option value="new-zealand">New Zealand</option>
+                                <option value="ohio">Ohio</option>
+                                <option value="oregon">Oregon</option>
+                                <option value="panama">Panama</option>
+                                <option value="poland">Poland</option>
+                                <option value="singapore">Singapore</option>
+                                <option value="slovenia">Slovenia</option>
+                                <option value="tennessee">Tennessee</option>
+                                <option value="texas">Texas</option>
+                                <option value="united-kingdom">United Kingdom</option>
+                                <option value="washington">Washington</option>
+                                <option value="wyoming">Wyoming</option>
+                                <option value="mississippi">Mississippi</option>
+                                <option value="jamaica">Jamaica</option>
+                                <option value="pennsylvania">Pennsylvania</option>
+                                <option value="arizona">Arizona</option>
+                                <option value="connecticut">Connecticut</option>
+                                <option value="maine">Maine</option>
+                                <option value="idaho">Idaho</option>
+                                <option value="south-dakota">South Dakota</option>
+                                <option value="louisiana">Louisiana</option>
+                                <option value="oklahoma">Oklahoma</option>
+                                <option value="nevada">Nevada</option>
+                                <option value="new-jersey">New Jersey</option>
+                                <option value="iowa">Iowa</option>
+                                <option value="maryland">Maryland</option>
+                                <option value="mauritius">Mauritius</option>
+                                <option value="mexico">Mexico</option>
+                                <option value="south-africa">South Africa</option>
+                                <option value="sweden">Sweden</option>
+                                <option value="nova-scotia">Nova Scotia</option>
+                                <option value="quebec">Quebec</option>
+                                <option value="virginia">Virginia</option>
+                                <option value="minnesota">Minnesota</option>
+                                <option value="colorado">Colorado</option>
+                                <option value="alabama">Alabama</option>
+                                <option value="kentucky">Kentucky</option>
+                                <option value="south-carolina">South Carolina</option>
+                                <option value="france">France</option>
+                                <option value="switzerland">Switzerland</option>
+                                <option value="puerto-rico">Puerto Rico</option>
+                                <option value="arkansas">Arkansas</option>
+                                <option value="kansas">Kansas</option>
+                                <option value="utah">Utah</option>
+                                <option value="hawaii">Hawaii</option>
+                                <option value="new-hampshire">New Hampshire</option>
+                                <option value="north-dakota">North Dakota</option>
+                                <option value="thailand">Thailand</option>
+                                <option value="finland">Finland</option>
+                                <option value="dominican-republic">Dominican Republic</option>
+                                <option value="denmark">Denmark</option>
+                                <option value="germany">Germany</option>
+                                <option value="estonia">Estonia</option>
+                                <option value="turkey">Turkey</option>
+                                <option value="colombia">Colombia</option>
+                                <option value="hong-kong">Hong Kong</option></select>
+                            </select>
+                        </li>
+                    </ul>
+                    <div class="checkbox clearfix">
+                        <input type="checkbox" id="check" name="iCheck" value="" >
+                        <label for="">I agree to the <a href="#">Terms &amp; Conditions</a></label>
+                        <span class="xyz" style="left: 290px; top: 22px; display:block;">
+                            Please accept the terms and conditions<br>to proceed to payment.<br>
+                            <span class="xyz-close">x</span>
+                        </span>
+                    </div>
+                </div>
+
+                <button class="checkout" onclick="">
+                    <img src="images/btn_icon_bg.png" alt="">
+                    <span id="btn_card_icon"></span>
+                    <em>proceed to billing &amp;</em>
+                    <span id="btn_arrow"></span> 
+                    <h4>Payment</h4>                              
+                </button>
+            </form>
+
+        <div class="terms_conditions clearfix">
+            <span class="b-close">
+                <span><img src="images/remove.png" alt=""></span>
+            </span>
+           <div class="clearfix">
+                <h2>Terms and Conditions</h2>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+            </div>
+        </div> <!-- terms_conditions -->
+
+                                  
+        </div> <!-- shipping_address -->    
+
+        <aside class="clearfix">
+            <div class="order_summary clearfix">
+                <h4>Order Summary</h4>
+                <div class="clearfix">
+                    <ul class="ordered_items clearfix">
+                        <li>
+                            <a href="#"><img src="images/goliath_thumb.jpg" alt="">
+                            Bathmate Goliath
+                            <em>2 x &#163;59.90</em></a>
+                        </li>
+                        <li>
+                            <a href="#"><img src="images/cleaning_kit_thumb.jpg" alt="">
+                            Bathmate Goliath
+                            <em>1 x &#163;29.90</em></a>                        
+                        </li>
+                        <li>
+                            <a href="#"><img src="images/gun_oil_thumb.jpg" alt="">
+                            Gun Oil H2O Lubricant
+                            <em>2 x &#163;29.90</em></a>
+                        </li>
+                    </ul>
+                    <ul class="total clearfix">
+                        <li>Cart Total</li>
+                        <li>Shipping</li>
+                        <li>Total</li>
+                    </ul>
+                    <ul class="total clearfix">
+                        <li>&#163;124.90</li>
+                        <li>&#163;5.90</li>
+                        <li>&#163;130.80</li>
+                    </ul>
+                </div>
+                <ul class="support clearfix">
+                    <li><a id="support" href="#">Customer Support <span></span></a></li>
+                    <li><a id="guarantee" href="#">Money Back Guarantee <span></span></a></li>
+                </ul>
+            </div> <!-- order_summary -->
+        </aside>
+        
+    </div> <!-- wrap -->
+</section>
+
+      
+
+<footer class="clearfix">
+    <div class="bg_image">
+        
+    </div>
+    <div class="wrap">
+        <ul class="security clearfix">
+            <li><img src="images/ssl_cards.png" alt=""></li>
+            <li><img src="images/shipping_box.png" alt=""></li>
+            <li><img src="images/mcafee_truste.png" alt=""></li>
+        </ul>
+    </div> <!-- wrap -->
+    
+    <div class="contact clearfix">
+    <div class="wrap">    
+        <ul class="clearfix">
+            <li><img src="images/call.png" alt="">+1 (800) 983-3820</li>
+            <li><img src="images/address.png" alt="">3023 Hamaker Court Fairfax, VA(Virginia) 22031</li>
+        </ul>
+    </div> <!-- wrap --> 
+    </div> <!-- contact -->       
+
+</footer>
+
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
+
+        <script src="js/plugins.js"></script>
+        <script src="js/chosen.jquery.min.js"></script> 
+        <script src="js/validetta-min.js"></script> 
+        <script src="js/bpopup.js"></script>  
+        <script src="js/main.js"></script>	
+        <script>
+            $(document).ready(function(){
+
+                $('select').chosen({disable_search_threshold: 10});
+
+                $('div.checkbox>label>a').click(function(){
+                    $('.terms_conditions').bPopup();
+                });
+
+            });
+
+            $('.checkbox span.xyz').hide();
+
+            $('button.checkout').click(function(){
+                if(!$('div.checkbox>div').hasClass('checked')){
+                    $('.checkbox span.xyz').show();                    
+                }
+                else{
+                    $('.checkbox span.xyz').hide();
+                }
+            });
+
+            $('.checkbox span.xyz-close').click(function(){
+                $('.checkbox span.xyz').hide();
+            });
+
+        </script>
+    </body>
+</html>

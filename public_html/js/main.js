@@ -1,8 +1,8 @@
 $(document).ready(function(){
 
   	var h = $(window).height();
-	
-	$('body').css('min-height',h);	
+
+	$('body').css('min-height',h);
 
 	var doc = document.documentElement;
 	doc.setAttribute('data-useragent', navigator.userAgent);
@@ -12,9 +12,11 @@ $(document).ready(function(){
 		radioClass: 'iradio_flat-grey'
 	});
 
+	/*
   	$("#shipping_form").validetta({
 	    realTime : true
-	});  
+	});
+	*/
 
 
 

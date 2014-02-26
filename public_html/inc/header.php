@@ -20,13 +20,18 @@
                 }
             </style>
         <![endif]-->
-
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
         <script src="js/modernizr-2.6.2.min.js"></script>
-        <script src="js/jquery.1.9.1.min.js"></script>
         <script src="js/simpleCart.min.js"></script>
         <script type="text/javascript">
-            simpleCart({
+            $(document).ready(function(){
+                $('button.checkout').click(function(){
+                    document.location.href = 'shipping';
+                });
+            });
 
+            simpleCart({
+                shippingFlatRate: 5.90,
                 cartColumns: [
                     { attr: "name" , label: "Name" },
                     { attr: "quantity" , label: "Qty" },
@@ -36,11 +41,36 @@
 
                 ],
                 // "div" or "table" - builds the cart as a table or collection of divs
-                cartStyle: "table",
+                cartStyle: "<?php echo $cartStyle; ?>",
 
                 // set the currency, see the currency reference for more info
                 currency: "GBP",
             });
+
+            simpleCart.bind( "afterAdd" , function( item ){
+                $('html, body').animate({ scrollTop: 0 }, 'fast');
+                recalc();
+            });
+
+            simpleCart.bind( 'ready' , function(){
+                recalc();
+            });
+
+            simpleCart.bind( 'update' , function(){
+                recalc();
+            });
+
+            function recalc() {
+                var items = [];
+                simpleCart.each(function( item , x ){
+                    items.push( item.get('name') );
+                });
+
+                $('#subtotal').html(simpleCart.total());
+                $('#shippingtotal').html(simpleCart.shipping());
+                $('#grandtotal').html(simpleCart.grandTotal());
+                console.log( items );
+            }
 
         </script>
         <link type="text/css" rel="stylesheet" href="http://fast.fonts.net/cssapi/0355ef5c-16d3-41ff-8723-a6509d50b88b.css"/>
