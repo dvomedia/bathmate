@@ -25,9 +25,15 @@
         <script src="js/simpleCart.min.js"></script>
         <script type="text/javascript">
             $(document).ready(function(){
-                $('button.checkout').click(function(){
+
+                $('button.shipping').click(function(){
                     document.location.href = 'shipping';
                 });
+
+                $('button.payment').click(function(){
+                    document.location.href = 'payment';
+                });
+
             });
 
             simpleCart({
@@ -45,6 +51,23 @@
 
                 // set the currency, see the currency reference for more info
                 currency: "GBP",
+
+                checkout: {
+                    type: "PayPal" ,
+                    email: "you@yours.com" ,
+
+                    // use paypal sandbox, default is false
+                    sandbox: true ,
+
+                    // http method for form, "POST" or "GET", default is "POST"
+                    method: "GET" ,
+
+                    // url to return to on successful checkout, default is null
+                    success: "success.html" ,
+
+                    // url to return to on cancelled checkout, default is null
+                    cancel: "cancel.html"
+                }
             });
 
             simpleCart.bind( "afterAdd" , function( item ){
@@ -63,12 +86,32 @@
             function recalc() {
                 var items = [];
                 simpleCart.each(function( item , x ){
-                    items.push( item.get('name') );
+                    items.push('<li>');
+                    items.push('<a href="#"><img src="');
+                    items.push(item.get('image'));
+                    items.push('" alt="">');
+                    items.push(item.get('name'));
+                    items.push('<em>');
+                    items.push(item.get('quantity'));
+                    items.push(' x ');
+                    items.push('&#163;');
+                    items.push((item.get('quantity')*item.get('price')).toFixed(2));
+                    items.push('</em></a>');
+                    items.push('</li>');
                 });
+                items.push('</ul>')
 
-                $('#subtotal').html(simpleCart.total());
-                $('#shippingtotal').html(simpleCart.shipping());
-                $('#grandtotal').html(simpleCart.grandTotal());
+                // reset
+                $('#shippingproducts').html('');
+                $('<ul />', {
+                    'class': 'ordered_items clearfix',
+                    'id' : 'cart_ul',
+                    html: items.join('')
+                }).prependTo('#shippingproducts');
+
+                $('#subtotal').html('&#163;' + simpleCart.total().toFixed(2));
+                $('#shippingtotal').html('&#163;' + simpleCart.shipping().toFixed(2));
+                $('#grandtotal').html('&#163;' + simpleCart.grandTotal().toFixed(2));
                 console.log( items );
             }
 

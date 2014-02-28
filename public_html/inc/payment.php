@@ -1,3 +1,68 @@
+<script>
+    $(document).ready(function(){
+
+        $("#card_li").click(function(){
+            $('#card').iCheck('check');
+            $('#paypal').iCheck('uncheck');
+            $(this).css('background-color', '#171717');
+            $(this).css('transition', 'background-color 0.25s ease-out');
+            $("#paypal_li").css('background-color', '#252525');
+        });
+
+        $("#paypal_li").click(function(){
+            $('#paypal').iCheck('check');
+            $('#card').iCheck('uncheck');
+            $(this).css('background-color', '#171717');
+            $(this).css('transition', 'background-color 0.25s ease-out');
+            $("#card_li").css('background-color', '#252525');
+        });
+
+        $("#card_li label, #card_li div.iradio_flat-grey ins").click(function(){
+            $('#card_li').css('background-color', '#171717');
+            $('#card_li').css('transition', 'background-color 0.25s ease-out');
+            $("#paypal_li").css('background-color', '#252525');
+        });
+
+        $("#paypal_li label, #paypal_li div.iradio_flat-grey ins").click(function(){
+            $('#paypal_li').css('background-color', '#171717');
+            $('#paypal_li').css('transition', 'background-color 0.25s ease-out');
+            $("#card_li").css('background-color', '#252525');
+        });
+
+        $('div.payment p').hide();
+        $('div.payment p:last-child').show();
+
+        $('input#card').on('ifChecked', function(event){
+            $('div.payment p').hide();
+            $('ul.card_info').show();
+            $('div.payment p:last-child').show();
+        });
+
+        $('input#paypal').on('ifChecked', function(event){
+            $('ul.card_info').hide();
+            $('div.payment p').show();
+            $('div.payment p:last-child').hide();
+        });
+
+        $('select').chosen({disable_search_threshold: 10});
+
+        $('button.checkout').click(function(){
+            if (($('#card_li div.iradio_flat-grey').hasClass('checked'))&&(!$('#paypal_li div.iradio_flat-grey').hasClass('checked'))) {
+
+                $('form').addClass('payment_form');
+                $(".payment_form").validetta({
+                    realTime : false
+                });
+            }
+            if($('#paypal_li div.iradio_flat-grey').hasClass('checked')){
+                $('ul.card_info').remove();
+            }
+        });
+
+    });
+</script>
+
+
 <section class="shipping clearfix">
     <div class="wrap clearfix">
         <?php include "steps.php"; ?>
@@ -78,7 +143,7 @@
                     </ul>
                     <p>Please note, your card statement will show only <strong>UM Products</strong></p>
                 </div>
-                <button type="submit" class="checkout">
+                <button  type="submit" class="checkout">
                     <img src="images/btn_icon_bg.png" alt="">
                     <span id="btn_box_icon"></span>
                     <span id="btn_arrow"></span>
@@ -88,44 +153,7 @@
 
         </div> <!-- shipping_address payment -->
 
-        <aside class="clearfix">
-            <div class="order_summary clearfix">
-                <h4>Order Summary</h4>
-                <div class="clearfix">
-                    <ul class="ordered_items clearfix">
-                        <li>
-                            <a href="#"><img src="images/goliath_thumb.jpg" alt="">
-                            Bathmate Goliath
-                            <em>2 x &#163;59.90</em></a>
-                        </li>
-                        <li>
-                            <a href="#"><img src="images/cleaning_kit_thumb.jpg" alt="">
-                            Bathmate Goliath
-                            <em>1 x &#163;29.90</em></a>
-                        </li>
-                        <li>
-                            <a href="#"><img src="images/gun_oil_thumb.jpg" alt="">
-                            Gun Oil H2O Lubricant
-                            <em>2 x &#163;29.90</em></a>
-                        </li>
-                    </ul>
-                    <ul class="total clearfix">
-                        <li>Cart Total</li>
-                        <li>Shipping</li>
-                        <li>Total</li>
-                    </ul>
-                    <ul class="total clearfix">
-                        <li>&#163;124.90</li>
-                        <li>&#163;5.90</li>
-                        <li>&#163;130.80</li>
-                    </ul>
-                </div>
-                <ul class="support clearfix">
-                    <li><a id="support" href="#">Customer Support <span></span></a></li>
-                    <li><a id="guarantee" href="#">Money Back Guarantee <span></span></a></li>
-                </ul>
-            </div> <!-- order_summary -->
-        </aside>
+        <?php include('orderaside.php'); ?>
 
     </div> <!-- wrap -->
 </section>

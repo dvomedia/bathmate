@@ -1,4 +1,30 @@
+<script>
+    $(document).ready(function(){
 
+        $('select').chosen({disable_search_threshold: 10});
+
+        $('div.checkbox>label>a').click(function(){
+            $('.terms_conditions').bPopup();
+        });
+
+    });
+
+    $('.checkbox span.xyz').hide();
+
+    $('button.checkout').click(function(){
+        if(!$('div.checkbox>div').hasClass('checked')){
+            $('.checkbox span.xyz').show();
+        }
+        else{
+            $('.checkbox span.xyz').hide();
+        }
+    });
+
+    $('.checkbox span.xyz-close').click(function(){
+        $('.checkbox span.xyz').hide();
+    });
+
+</script>
 <section class="shipping clearfix">
     <div class="wrap clearfix">
         <?php include "steps.php"; ?>
@@ -157,7 +183,7 @@
                     </div>
                 </div>
 
-                <button class="checkout" onclick="">
+                <button class="checkout payment" onclick="">
                     <img src="images/btn_icon_bg.png" alt="">
                     <span id="btn_card_icon"></span>
                     <em>proceed to billing &amp;</em>
@@ -182,28 +208,7 @@
 
         </div> <!-- shipping_address -->
 
-        <aside class="clearfix">
-            <div class="order_summary clearfix">
-                <h4>Order Summary</h4>
-                <div class="clearfix">
-                    <div style="color: white" class="simpleCart_items ordered_items clearfix"></div>
-                    <ul class="total clearfix">
-                        <li>Cart Total</li>
-                        <li>Shipping</li>
-                        <li>Total</li>
-                    </ul>
-                    <ul class="total clearfix">
-                        <li id="subtotal">0</li>
-                        <li id="shippingtotal">0</li>
-                        <li id="grandtotal">0</li>
-                    </ul>
-                </div>
-                <ul class="support clearfix">
-                    <li><a id="support" href="#">Customer Support <span></span></a></li>
-                    <li><a id="guarantee" href="#">Money Back Guarantee <span></span></a></li>
-                </ul>
-            </div> <!-- order_summary -->
-        </aside>
+        <?php include('orderaside.php'); ?>
 
     </div> <!-- wrap -->
 </section>

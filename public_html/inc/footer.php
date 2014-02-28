@@ -24,7 +24,7 @@
 
 
 
-        <!--
+
         <div id="fb-root"></div>
         <script>
             (function(d, s, id) {
@@ -47,7 +47,7 @@
         </script>
 
         <script src="https://apis.google.com/js/platform.js"></script>
-        -->
+
         <script src="js/plugins.js"></script>
         <script src="js/main.js"></script>
     </body>
