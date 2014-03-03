@@ -12,11 +12,11 @@ $(document).ready(function(){
 		radioClass: 'iradio_flat-grey'
 	});
 
-	/*
+
   	$("#shipping_form").validetta({
 	    realTime : true
 	});
-	*/
+
 
 
 

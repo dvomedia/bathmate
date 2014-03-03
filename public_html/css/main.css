@@ -296,12 +296,7 @@ tbody tr:last-child{
     box-shadow: 0 2px 0 #000, inset 0 2px 1px #000;
     */
 }
-tbody tr:last-child td{
 
-    font-family: "HelveticaNeueW01-75Bold", Arial;
-
-    padding: 10px 15px;
-}
 
 div.more_comfort{
     width: 500px;

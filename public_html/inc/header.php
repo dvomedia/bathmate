@@ -11,37 +11,34 @@
         <meta name="viewport" content="width=device-width">
 
         <link rel="stylesheet" href="css/normalize.min.css">
+        <link rel="stylesheet" href="css/grey.css">
+        <link rel="stylesheet" href="css/chosen.css">
         <link rel="stylesheet" href="css/main.css">
         <link rel="stylesheet" href="css/custom.css">
-        <!--[if lt IE 10]>
+        <!--[if lt IE 12]>
             <style>
-                section hr{
+                section.shipping .wrap hr{
                     margin-left: -15px;
                 }
             </style>
         <![endif]-->
+
+        <style>
+            html[data-useragent*='MSIE 11.0'] section.shipping .wrap hr{
+                margin-left: -15px;
+            }
+        </style>
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
         <script src="js/modernizr-2.6.2.min.js"></script>
         <script src="js/simpleCart.min.js"></script>
         <script type="text/javascript">
-            $(document).ready(function(){
-
-                $('button.shipping').click(function(){
-                    document.location.href = 'shipping';
-                });
-
-                $('button.payment').click(function(){
-                    document.location.href = 'payment';
-                });
-
-            });
 
             simpleCart({
                 shippingFlatRate: 5.90,
                 cartColumns: [
                     { attr: "name" , label: "Name" },
                     { attr: "quantity" , label: "Qty" },
-                    { view: "remove" , text: "Remove" , label: false },
+                    { attr: "remove", view: "remove" , text: "Remove" , label: 'action' },
                     { attr: "price" , label: "Price", view: 'currency' },
                     { attr: "total" , label: "SubTotal", view: 'currency' },
 
@@ -112,7 +109,6 @@
                 $('#subtotal').html('&#163;' + simpleCart.total().toFixed(2));
                 $('#shippingtotal').html('&#163;' + simpleCart.shipping().toFixed(2));
                 $('#grandtotal').html('&#163;' + simpleCart.grandTotal().toFixed(2));
-                console.log( items );
             }
 
         </script>

@@ -1,3 +1,10 @@
+<?php
+
+// access to shipping data here
+// print_r($_POST);
+
+?>
+
 <script>
     $(document).ready(function(){
 

@@ -1,30 +1,4 @@
-<script>
-    $(document).ready(function(){
 
-        $('select').chosen({disable_search_threshold: 10});
-
-        $('div.checkbox>label>a').click(function(){
-            $('.terms_conditions').bPopup();
-        });
-
-    });
-
-    $('.checkbox span.xyz').hide();
-
-    $('button.checkout').click(function(){
-        if(!$('div.checkbox>div').hasClass('checked')){
-            $('.checkbox span.xyz').show();
-        }
-        else{
-            $('.checkbox span.xyz').hide();
-        }
-    });
-
-    $('.checkbox span.xyz-close').click(function(){
-        $('.checkbox span.xyz').hide();
-    });
-
-</script>
 <section class="shipping clearfix">
     <div class="wrap clearfix">
         <?php include "steps.php"; ?>
@@ -32,48 +6,48 @@
 
         <div class="shipping_address clearfix">
             <h4>Enter your shipping address</h4>
-            <form id="shipping_form" class="clearfix" action="#" method="post">
+            <form id="shipping_form" class="clearfix" action="payment" method="post">
 
                 <div class="clearfix">
                     <ul class="clearfix">
                         <li>
                             <label>First Name</label>
-                            <input type="text" data-validetta="required">
+                            <input type="text" name="shipping[fname]" data-validetta="required">
                         </li>
                         <li>
                             <label>Last Name</label>
-                            <input type="text">
+                            <input type="text" name="shipping[lname]">
                         </li>
                         <li>
                             <label>Email</label>
-                            <input type="email" data-validetta="required,email">
+                            <input type="email"  name="shipping[email]]" data-validetta="required,email">
                         </li>
                         <li>
                             <label>Phone Number</label>
-                            <input type="tel" data-validetta="required,number">
+                            <input type="tel"  name="shipping[phone]" data-validetta="required,number">
                         </li>
                     </ul>
                     <ul class="clearfix">
                         <li>
                             <label>Street Address Line 1</label>
-                            <input type="text" data-validetta="required">
+                            <input type="text"  name="shipping[streetline1]" data-validetta="required">
                         </li>
                         <li>
                             <label>Street Address Line 2</label>
-                            <input type="text">
+                            <input type="text"  name="shipping[streetline2]">
                         </li>
                         <li>
                             <label>City</label>
-                            <input type="text" data-validetta="required">
+                            <input type="text"  name="shipping[city]" data-validetta="required">
                         </li>
                         <li>
                             <label>Zip/Postal Code</label>
-                            <input type="text" data-validetta="required">
+                            <input type="text"  name="shipping[zip]" data-validetta="required">
                         </li>
                         <li>
                             <label>Region</label>
                             <!-- <span></span> -->
-                            <select name="" id="">
+                            <select name="region" id="">
                                 <option value="">Select a region</option>
                                 <option value="australia">Australia</option>
                                 <option value="california">California</option>
@@ -88,7 +62,7 @@
                         <li>
                             <label>Country</label>
                             <!-- <span></span> -->
-                            <select name="" id="">
+                            <select name="country" id="">
                                 <option value="">Select a country</option>
                                 <option value="australia">Australia</option>
                                 <option value="california">California</option>

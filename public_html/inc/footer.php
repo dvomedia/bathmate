@@ -21,10 +21,6 @@
 
 </footer>
 
-
-
-
-
         <div id="fb-root"></div>
         <script>
             (function(d, s, id) {
@@ -44,11 +40,43 @@
             po.src = 'https://apis.google.com/js/platform.js';
             var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
           })();
+
+
         </script>
 
         <script src="https://apis.google.com/js/platform.js"></script>
 
         <script src="js/plugins.js"></script>
+        <script src="js/chosen.jquery.min.js"></script>
+        <script src="js/validetta-min.js"></script>
+        <script src="js/bpopup.js"></script>
         <script src="js/main.js"></script>
+        <script>
+            $(document).ready(function(){
+
+                $('select').chosen({disable_search_threshold: 10});
+
+                $('div.checkbox>label>a').click(function(){
+                    $('.terms_conditions').bPopup();
+                });
+
+            });
+
+            $('.checkbox span.xyz').hide();
+
+            $('button.checkout').click(function(){
+                if(!$('div.checkbox>div').hasClass('checked')){
+                    $('.checkbox span.xyz').show();
+                }
+                else{
+                    $('.checkbox span.xyz').hide();
+                }
+            });
+
+            $('.checkbox span.xyz-close').click(function(){
+                $('.checkbox span.xyz').hide();
+            });
+
+        </script>
     </body>
 </html>

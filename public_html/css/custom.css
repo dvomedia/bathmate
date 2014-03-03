@@ -1,0 +1,26 @@
+.item_image {
+    display: none;
+}
+
+td.item-remove {
+    background: url('../images/remove.png') no-repeat;
+background-position: 23px 18px;
+}
+
+td.item-remove a.simpleCart_remove {
+    display: inline-table;
+    width: 100%;
+    text-transform: uppercase;
+}
+
+th.item-quantity, td.item-quantity {
+    text-align: center;
+}
+
+th.item-price, td.item-price {
+    text-align: center;
+}
+
+th.item-total, td.item-total {
+    text-align: right;
+}
