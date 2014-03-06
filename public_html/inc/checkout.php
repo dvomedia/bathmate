@@ -3,7 +3,7 @@
         <?php include "steps.php"; ?>
         <hr/>
 
-        <div class="simpleCart_items"></div>
+        <div id="checkoutproducts" class="simpleCart_items"></div>
 
         <!--
         <table>
@@ -59,6 +59,7 @@
             <h5>Check out the accessories below</h5>
         </div> <!-- more_comfort -->
 
+        <form style="padding: 0;" method="POST" action="/shipping">
         <button class="checkout shipping">
             <img src="images/btn_icon_bg.png" alt="">
             <span id="btn_lock_icon"></span>
@@ -66,6 +67,7 @@
             <span id="btn_arrow"></span>
             <h4>Checkout</h4>
         </button>
+        </form>
 
         <div class="items clearfix">
             <h4>Add an Accessory</h4>

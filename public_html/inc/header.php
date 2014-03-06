@@ -69,6 +69,8 @@
 
             simpleCart.bind( "afterAdd" , function( item ){
                 $('html, body').animate({ scrollTop: 0 }, 'fast');
+                console.log('#cartItem_' + item.get('id'));
+                $('#cartItem_' + item.get('id')).animate({ backgroundColor: "green" }, "slow");
                 recalc();
             });
 
@@ -80,7 +82,28 @@
                 recalc();
             });
 
+            simpleCart.bind( 'afterSave' , function(){
+                recalc();
+            });
+
+
+            simpleCart.bind( 'afterRemove' , function(){
+                recalc();
+            });
+
+            simpleCart.bind( 'load' , function(){
+                recalc();
+            });
+
             function recalc() {
+                /* checkout page */
+                var totalRow = $('#checkoutproducts table tr:last').attr('id');
+                if (totalRow != 'checkoutTotalRow') {
+                    $('#checkoutproducts table tr:last').after('<tr><td>Shipping</td><td></td><td></td><td>&#163;' + simpleCart.shipping().toFixed(2) + '</td><td>&#163;' + simpleCart.shipping().toFixed(2) + '</td></tr>');
+                    $('#checkoutproducts table tr:last').after('<tr id="checkoutTotalRow"><td>Total</td><td></td><td></td><td></td><td>&#163;' + simpleCart.total().toFixed(2) + '</td></tr>');
+                }
+
+                /* product / shipping info */
                 var items = [];
                 simpleCart.each(function( item , x ){
                     items.push('<li>');
